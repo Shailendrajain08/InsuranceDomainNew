@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 })
 export class AuthService {
 
-  constructor(private http:HttpClient) { 
+  constructor(private http:HttpClient) {
 
   }
   apiurl='http://localhost:3000/user';
@@ -37,5 +37,9 @@ export class AuthService {
   }
   Getaccessbyrole(role:any,menu:any){
     return this.http.get('http://localhost:3000/roleaccess?role='+role+'&menu='+menu)
+  }
+
+  getPolicies(){
+    return this.http.get('https://652ff7016c756603295e0287.mockapi.io/insurance-domain')
   }
 }
