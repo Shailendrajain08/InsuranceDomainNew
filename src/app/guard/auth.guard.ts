@@ -15,9 +15,8 @@ export class AuthGuard implements CanActivate {
 
     if (this.service.isloggedin()) {
       if (route.url.length > 0) {
-        console.log(route.url[0].path)
         let menu = route.url[0].path;
-        if (menu == 'user') {
+        if (menu == 'customer') {
           if (this.service.getrole() == 'admin') {
             return true;
           } else {
@@ -25,7 +24,8 @@ export class AuthGuard implements CanActivate {
               this.tostr.warning('You dont have access.')
             return false;
           }
-        }else{
+        }
+        else{
           return true;
         }
       } else {

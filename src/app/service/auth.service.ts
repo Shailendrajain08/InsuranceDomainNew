@@ -42,4 +42,6 @@ export class AuthService {
   getPolicies(){
     return this.http.get('https://652ff7016c756603295e0287.mockapi.io/insurance-domain')
   }
+
+
 }

@@ -7,8 +7,10 @@ import { ActivatedRoute, Route, Router } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements DoCheck {
-  title = 'authentication';
+  title = 'Policy Domain';
   isadmin=false;
+  isAgent = false;
+  isCustomer = false;
   isMenuVisible=false;
   constructor(private route:Router){
     let role=sessionStorage.getItem('role');
@@ -27,8 +29,16 @@ export class AppComponent implements DoCheck {
 
     if (role == 'admin') {
       this.isadmin = true;
+    } else if (role == 'agent') {
+      this.isAgent = true;
+    } else if (role == 'customer') {
+      this.isCustomer = true;
     }else{
       this.isadmin = false;
+      this.isAgent = false;
+      this.isCustomer = false;
     }
+
+
   }
 }

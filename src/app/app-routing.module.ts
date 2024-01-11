@@ -1,12 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CustomerComponent } from './customer/customer.component';
 import { AuthGuard } from './guard/auth.guard';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { UserComponent } from './user/user.component';
 import { PoliciesComponent } from './policies/policies.component';
+import { CustomerComponent } from './customer/customer.component';
+import { CartComponent } from './cart/cart.component';
+import { PurchasHistoryComponent } from './purchas-history/purchas-history.component';
 
 const routes: Routes = [
  {component:LoginComponent,path:'login'},
@@ -15,6 +17,8 @@ const routes: Routes = [
  {component:HomeComponent,path:'',canActivate:[AuthGuard]},
  {component:UserComponent,path:'user',canActivate:[AuthGuard]},
  {component:CustomerComponent,path:'customer',canActivate:[AuthGuard]},
+ {component:CartComponent, path:'cart/:id'},
+ {component:PurchasHistoryComponent, path:'MyPurchase'}
 ];
 
 @NgModule({

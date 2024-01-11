@@ -15,6 +15,8 @@ import { ToastrModule } from 'ngx-toastr';
 import { UpdatepopupComponent } from './updatepopup/updatepopup.component';
 import { CustomerComponent } from './customer/customer.component';
 import { PoliciesComponent } from './policies/policies.component';
+import { CartComponent } from './cart/cart.component';
+import { PurchasHistoryComponent } from './purchas-history/purchas-history.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { PoliciesComponent } from './policies/policies.component';
     UserComponent,
     UpdatepopupComponent,
     CustomerComponent,
-    PoliciesComponent
+    PoliciesComponent,
+    CartComponent,
+    PurchasHistoryComponent
   ],
   imports: [
     BrowserModule,

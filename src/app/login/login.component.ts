@@ -10,12 +10,12 @@ import { AuthService } from '../service/auth.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
+  result: any;
+
   constructor(private builder: FormBuilder, private toastr: ToastrService, private service: AuthService,
     private router: Router) {
-      sessionStorage.clear();
-
+    sessionStorage.clear();
   }
-  result: any;
 
   loginform = this.builder.group({
     id: this.builder.control('', Validators.required),
@@ -28,8 +28,8 @@ export class LoginComponent {
         this.result = item;
         if (this.result.password === this.loginform.value.password) {
           if (this.result.isactive) {
-            sessionStorage.setItem('username',this.result.id);
-            sessionStorage.setItem('role',this.result.role);
+            sessionStorage.setItem('username', this.result.id);
+            sessionStorage.setItem('role', this.result.role);
             this.router.navigate(['']);
           } else {
             this.toastr.error('Please contact Admin', 'InActive User');
