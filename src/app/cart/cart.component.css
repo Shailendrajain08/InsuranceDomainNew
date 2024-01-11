@@ -13,7 +13,7 @@
 }
 
 .form{
-  width: 48%;
+  width: 50%;
   /* margin-top: 2%; */
   margin-left: 2%;
 }
@@ -30,5 +30,24 @@
   width: 90%;
   text-align: center;
   margin-left: 5%;
+}
+
+.acceptedCard{
+  padding: 15px 0px 0px 5%;
+}
+
+.icon-container {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.icon-container i {
+  padding-left: 5%;
+}
+
+.header{
+  margin-top: 10px;
+  margin-left: 2%;
+  text-decoration: underline;
 }
 

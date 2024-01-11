@@ -19,11 +19,20 @@
       "isactive": true
     },
     {
-      "id": "Digital",
-      "name": "Digital services",
-      "password": "Digi1234@",
-      "email": "digi@gmail.com",
-      "gender": "female",
+      "id": "Shail08",
+      "name": "Shailendra Jain",
+      "password": "Shail0894@",
+      "email": "shail@gmail.com",
+      "gender": "male",
+      "role": "customer",
+      "isactive": true
+    },
+    {
+      "id": "abhi12",
+      "name": "Abhinav",
+      "password": "Abhi1234@",
+      "email": "abhi@gmail.com",
+      "gender": "male",
       "role": "customer",
       "isactive": true
     }
@@ -78,31 +87,84 @@
       "havedelete": false
     }
   ],
-  "customer": [
+  "purchased": [
     {
       "id": 1,
-      "name": "rakhesh",
-      "Creditlimit": 1000
+      "name": "Care Supreme",
+      "coverName": "Home Insurance",
+      "category": "Property",
+      "type": "Basic",
+      "coverage": "Coverage for your home and belongings",
+      "price": 800,
+      "benefits": [
+        "Coverage for fire damage",
+        "Coverage for theft",
+        "Liability coverage"
+      ],
+      "cover": 5,
+      "policyID": 6,
+      "detailFullname": "Shailendra Jain",
+      "detailEmail": "shailendra@gmail.com",
+      "detailContact": 7869505416,
+      "detailComment": "I am purchasing this insurance because I think this insurance will cover my home very well and it will provide better cover for my home.",
+      "cardHolderName": "Shailendra Jain",
+      "cardnumber": "1111222233334444",
+      "expmonth": "April",
+      "expyear": "2028",
+      "claimed": true,
+      "userID": "Shail08"
     },
     {
       "id": 2,
-      "name": "rahul",
-      "Creditlimit": 1000
+      "name": "Life Cover",
+      "coverName": "Life Insurance",
+      "category": "Life",
+      "type": "Basic",
+      "coverage": "Coverage for your life and dependents",
+      "price": 800,
+      "benefits": [
+        "Coverage for accidents",
+        "Coverage for natural death",
+        "Coverage of hospital bills"
+      ],
+      "cover": 5,
+      "policyID": 13,
+      "detailFullname": "Abhinav Jain",
+      "detailEmail": "abhi@gmail.com",
+      "detailContact": 7415253645,
+      "detailComment": "I am purchasing this insurance because I think this insurance will cover my self very well and it will provide better cover for me and my family.",
+      "cardHolderName": "Abhinav Jain",
+      "cardnumber": "7458963211478523",
+      "expmonth": "August",
+      "expyear": "2027",
+      "claimed": false,
+      "userID": "abhi12"
     },
     {
       "id": 3,
-      "name": "ramesh",
-      "Creditlimit": 1000
-    },
-    {
-      "id": 4,
-      "name": "rahim",
-      "Creditlimit": 1000
-    },
-    {
-      "id": 5,
-      "name": "robert",
-      "Creditlimit": 1000
+      "name": "Life Cover Plus",
+      "coverName": "Life Insurance",
+      "category": "Life",
+      "type": "Basic",
+      "coverage": "Coverage for your life and dependents",
+      "price": 500,
+      "benefits": [
+        "Coverage for accidents",
+        "Coverage for natural death",
+        "Coverage of hospital bills"
+      ],
+      "cover": 5,
+      "policyID": 14,
+      "detailFullname": "Shailendra Jain",
+      "detailEmail": "shailendra@gmail.com",
+      "detailContact": 7869505416,
+      "detailComment": "I am purchasing this insurance because I think this insurance will cover my self very well and it will provide better cover for me and my family.",
+      "cardHolderName": "Shailendra Jain",
+      "cardnumber": "1111222233334444",
+      "expmonth": "April",
+      "expyear": "2028",
+      "claimed": false,
+      "userID": "Shail08"
     }
   ]
 }

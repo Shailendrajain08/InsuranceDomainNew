@@ -30,8 +30,6 @@ export class PoliciesComponent implements OnInit {
         this.coverName = this.coverName.filter((item: any,
           index: any) => this.coverName.indexOf(item) === index);
       }
-
-      console.log(this.tags)
     })
 
 
@@ -39,7 +37,7 @@ export class PoliciesComponent implements OnInit {
 
   getUserRole() {
     this.role = sessionStorage.getItem('role') != null ? sessionStorage.getItem('role')?.toString() : '';
-    console.log("role", this.role)
+
   }
 
 

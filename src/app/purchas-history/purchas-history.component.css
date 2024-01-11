@@ -1,0 +1,42 @@
+.main-heading{
+  width: 100%;
+}
+
+.main-body{
+width: 100%;
+
+}
+
+.card{
+  margin-bottom: 20px;
+}
+
+.card:hover{
+  border: 2px solid #1976d2;
+  border-radius: 5px;
+  h1{
+    color: #1976d2;
+  }
+}
+
+.matCard{
+  width: 100%;
+  padding: 1%;
+  display: flex;
+}
+
+.div1{
+  width: 49%;
+}
+
+.div2{
+  width: 49%;
+}
+
+.positive {
+  color: green;
+}
+
+.negative {
+  color: red;
+}

@@ -1,1 +1,51 @@
-<p>purchas-history works!</p>
+<div class="main-heading">
+  <p>
+    <mat-toolbar>
+      <span>Purchased Policies</span>
+    </mat-toolbar>
+  </p>
+</div>
+<div class="main-body">
+  <div class="card" *ngFor="let item of purchasedDetails">
+    <mat-card >
+      <div class="matCard">
+     <div class="div1">
+      <h1>Policy Details</h1>
+      <hr>
+      <mat-card-header>
+        <mat-card-subtitle>{{item.coverName}}</mat-card-subtitle>
+        <mat-card-title style="color: #1976d2;">{{item.name}}</mat-card-title>
+      </mat-card-header>
+      <hr>
+      <mat-card-content>
+        <p><b style="color:#1976d2">Category:</b> {{item.category}}</p>
+        <p>{{item.coverage}}</p>
+        <p>{{item.benefits }}</p>
+        <p class="price"><b style="color:#1976d2">Amount:</b> {{item.price | currency :"INR" }}/-</p>
+      </mat-card-content>
+      <hr>
+     </div>
+     <div class="div2">
+      <h1 style="padding-left: 1%;">Policy Holder Details</h1>
+      <hr>
+      <mat-card-header>
+        <mat-card-subtitle><b style="color:#1976d2">E-mail:</b> {{item.detailEmail}}</mat-card-subtitle>
+        <mat-card-title style="color: #1976d2;">Name: {{item.detailFullname}}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p><b style="color:#1976d2">Contact:</b> {{item.detailContact}}</p>
+        <p><b style="color:#1976d2">Comment:</b> {{item.detailComment}}</p>
+        <p ><b style="color:#1976d2">Claim Status: </b> <b [ngClass]="{
+          'positive' : item.claimed == true,
+          'negative' : item.claimed == false
+       }">{{item.claimed ? 'Claimed': 'Not claimed'}}</b></p>
+        <hr>
+        <div style="text-align: center; margin-top: 2%;">
+          <button class="example-full-width" mat-raised-button color="primary" [disabled]="item.claimed" (click)="changeClaim(item)">{{item.claimed ? "Claimed" :  "Claim Policy"}}</button>
+        </div>
+      </mat-card-content>
+     </div>
+    </div>
+    </mat-card>
+  </div>
+</div>

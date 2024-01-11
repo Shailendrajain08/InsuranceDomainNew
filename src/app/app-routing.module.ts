@@ -9,6 +9,7 @@ import { PoliciesComponent } from './policies/policies.component';
 import { CustomerComponent } from './customer/customer.component';
 import { CartComponent } from './cart/cart.component';
 import { PurchasHistoryComponent } from './purchas-history/purchas-history.component';
+import { ProfileComponent } from './profile/profile.component';
 
 const routes: Routes = [
  {component:LoginComponent,path:'login'},
@@ -18,7 +19,8 @@ const routes: Routes = [
  {component:UserComponent,path:'user',canActivate:[AuthGuard]},
  {component:CustomerComponent,path:'customer',canActivate:[AuthGuard]},
  {component:CartComponent, path:'cart/:id'},
- {component:PurchasHistoryComponent, path:'MyPurchase'}
+ {component:PurchasHistoryComponent, path:'MyPurchase'},
+ {component:ProfileComponent, path:'profile'}
 ];
 
 @NgModule({

@@ -23,7 +23,7 @@ export class RegisterComponent {
     email: this.builder.control('', Validators.compose([Validators.required, Validators.email])),
     gender: this.builder.control('male'),
     role: this.builder.control(''),
-    isactive: this.builder.control(false)
+    isactive: this.builder.control(false),
   });
   proceedregister() {
     if (this.registerform.valid) {

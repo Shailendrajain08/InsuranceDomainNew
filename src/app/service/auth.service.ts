@@ -9,7 +9,8 @@ export class AuthService {
   constructor(private http:HttpClient) {
 
   }
-  apiurl='http://localhost:3000/user';
+  private apiurl='http://localhost:3000/user';
+  private purchaseUrl = 'http://localhost:3000/purchased';
 
   RegisterUser(inputdata:any){
     return this.http.post(this.apiurl,inputdata)
@@ -43,5 +44,15 @@ export class AuthService {
     return this.http.get('https://652ff7016c756603295e0287.mockapi.io/insurance-domain')
   }
 
+  purchasedData(details:any){
+    return this.http.post(this.purchaseUrl, details)
+  }
 
+  getAllPurchases(){
+    return this.http.get(this.purchaseUrl)
+  }
+
+  updatePurchases(id:any, data:any){
+    return this.http.put(this.purchaseUrl+'/'+id,data)
+  }
 }

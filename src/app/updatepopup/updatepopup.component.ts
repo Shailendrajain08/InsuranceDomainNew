@@ -17,8 +17,8 @@ export class UpdatepopupComponent implements OnInit {
     this.service.getuserrole().subscribe(res => {
       this.rolelist = res;
     });
-    
-    
+
+
 
   }
   ngOnInit(): void {
@@ -51,10 +51,11 @@ export class UpdatepopupComponent implements OnInit {
     });
   }
   UpdateUser() {
-    this.service.updateuser(this.registerform.value.id, this.registerform.value).subscribe(res => {
-      this.toastr.success('Updated successfully.');
-      this.dialogref.close();
-    });
+    console.log(this.registerform.value)
+    // this.service.updateuser(this.registerform.value.id, this.registerform.value).subscribe(res => {
+    //   this.toastr.success('Updated successfully.');
+    //   this.dialogref.close();
+    // });
   }
 
 }
