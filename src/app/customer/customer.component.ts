@@ -1,9 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
-import { MatPaginator } from '@angular/material/paginator';
-import { MatSort } from '@angular/material/sort';
-import { MatTableDataSource } from '@angular/material/table';
-import { Router } from '@angular/router';
-import { ToastrService } from 'ngx-toastr';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { AuthService } from '../service/auth.service';
 
 @Component({
@@ -11,75 +6,26 @@ import { AuthService } from '../service/auth.service';
   templateUrl: './customer.component.html',
   styleUrls: ['./customer.component.css']
 })
-export class CustomerComponent {
+export class CustomerComponent implements OnInit {
 
-  constructor(private service: AuthService,private toastr:ToastrService,private router: Router) {
-   
-    this.SetAccesspermission();
+  item:any;
+  purchasedDetails:any = [];
 
-  }
-  customerlist: any;
-  dataSource: any;
-  @ViewChild(MatPaginator) paginator!: MatPaginator;
-  @ViewChild(MatSort) sort!: MatSort;
-
-  accessdata: any;
-  haveedit = false;
-  haveadd = false;
-  havedelete = false;
-
-  ngAfterViewInit(): void {
+  constructor(private _auth: AuthService) {
 
   }
-  LoadCustomer() {
-    this.service.GetAllCustomer().subscribe(res => {
-      this.customerlist = res;
-      this.dataSource = new MatTableDataSource(this.customerlist);
-      this.dataSource.paginator = this.paginator;
-      this.dataSource.sort = this.sort;
-    });
+
+  ngOnInit(): void {
+    this.getPurchasedData()
   }
-  SetAccesspermission() {
-    this.service.Getaccessbyrole(this.service.getrole(), 'customer').subscribe(res => {
-      this.accessdata = res;
-      //console.log(this.accessdata);
 
-      if(this.accessdata.length>0){
-        this.haveadd=this.accessdata[0].haveadd;
-        this.haveedit=this.accessdata[0].haveedit;
-        this.havedelete=this.accessdata[0].havedelete;
-        this.LoadCustomer();
-      }else{
-        alert('you are not authorized to access.');
-        this.router.navigate(['']);
-      }
-
-    });
-  }
-  displayedColumns: string[] = ['code', 'name', 'creditlimit', 'action'];
-
-  updatecustomer(code: any) {
-
-    if(this.haveedit){
-       this.toastr.success('Success')
-    }else{
-      this.toastr.warning("You don't have access for Edit")
-    }
-
-  }
-  removecustomer(code: any) {
-    if(this.havedelete){
-      this.toastr.success('Success')
-   }else{
-     this.toastr.warning("You don't have access for Delete")
-   }
-  }
-  addcustomer() {
-    if(this.haveadd){
-      this.toastr.success('Success')
-   }else{
-     this.toastr.warning("You don't have access for Create")
-   }
+  getPurchasedData(){
+    this._auth.getAllPurchases().subscribe((res)=>{
+      this.item = res;
+      for(let items of this.item){
+          this.purchasedDetails.push(items);
+        }
+    })
   }
 
 

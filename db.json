@@ -3,35 +3,35 @@
     {
       "id": "SJain",
       "name": "Shailendra Jain",
-      "password": "Sjain0894@",
-      "email": "sjain0894@gmail.com",
+      "password": "SJain1234@",
+      "email": "shailendra@gmail.com",
       "gender": "male",
       "role": "admin",
       "isactive": true
     },
     {
-      "id": "Shaan",
-      "name": "Shaan Jain",
-      "password": "Shaan123@",
-      "email": "shaan@gmail.com",
+      "id": "Prathmesh1",
+      "name": "Prathmesh",
+      "password": "Prathmesh12@",
+      "email": "prathmesh@gmail.com",
       "gender": "male",
       "role": "agent",
       "isactive": true
     },
     {
-      "id": "Shail08",
-      "name": "Shailendra Jain",
-      "password": "Shail0894@",
-      "email": "shail@gmail.com",
+      "id": "Deepak2",
+      "name": "Deepak",
+      "password": "Deepak123@",
+      "email": "deepak@gmail.com",
       "gender": "male",
       "role": "customer",
       "isactive": true
     },
     {
-      "id": "abhi12",
-      "name": "Abhinav",
-      "password": "Abhi1234@",
-      "email": "abhi@gmail.com",
+      "id": "abhishek3",
+      "name": "Abhishek",
+      "password": "Abhishek123@",
+      "email": "abhishek@gmail.com",
       "gender": "male",
       "role": "customer",
       "isactive": true
@@ -57,114 +57,330 @@
       "name": "Customer"
     }
   ],
-  "roleaccess": [
+  "policies": [
     {
-      "role": "admin",
-      "menu": "user",
-      "haveedit": true,
-      "haveadd": true,
-      "havedelete": true
-    },
-    {
-      "role": "admin",
-      "menu": "customer",
-      "haveedit": true,
-      "haveadd": true,
-      "havedelete": true
-    },
-    {
-      "role": "user",
-      "menu": "user",
-      "haveedit": false,
-      "haveadd": false,
-      "havedelete": false
-    },
-    {
-      "role": "user",
-      "menu": "customer",
-      "haveedit": true,
-      "haveadd": true,
-      "havedelete": false
-    }
-  ],
-  "purchased": [
-    {
+      "benefits": [
+        "Coverage for accidents",
+        "Coverage for theft",
+        "Roadside assistance"
+      ],
+      "category": "Vehicle",
+      "cover": 10,
+      "coverName": "Auto Insurance",
+      "coverage": "Full coverage for your car upto 50%",
       "id": 1,
-      "name": "Care Supreme",
-      "coverName": "Home Insurance",
-      "category": "Property",
-      "type": "Basic",
-      "coverage": "Coverage for your home and belongings",
-      "price": 800,
+      "name": "Reassure Platinum",
+      "price": 450,
+      "type": "Basic"
+    },
+    {
       "benefits": [
         "Coverage for fire damage",
         "Coverage for theft",
         "Liability coverage"
       ],
+      "category": "Property",
       "cover": 5,
-      "policyID": 6,
-      "detailFullname": "Shailendra Jain",
-      "detailEmail": "shailendra@gmail.com",
-      "detailContact": 7869505416,
-      "detailComment": "I am purchasing this insurance because I think this insurance will cover my home very well and it will provide better cover for my home.",
-      "cardHolderName": "Shailendra Jain",
+      "coverName": "Home Insurance",
+      "coverage": "Coverage for your home and belongings upto 50%",
+      "id": 2,
+      "name": "Care Supreme",
+      "price": 800,
+      "type": "Basic"
+    },
+    {
+      "benefits": [
+        "Coverage for accidents",
+        "Coverage for theft",
+        "Roadside assistance"
+      ],
+      "category": "Vehicle",
+      "cover": 10,
+      "coverName": "Bike Insurance",
+      "coverage": "Full coverage for your Bike upto 50%",
+      "id": 3,
+      "name": "Vintage Platinum",
+      "price": 350,
+      "type": "Basic"
+    },
+    {
+      "benefits": [
+        "Coverage for accidents",
+        "Coverage for natural death",
+        "Coverage of hospital bills"
+      ],
+      "category": "Life",
+      "cover": 5,
+      "coverName": "Life Insurance",
+      "coverage": "Coverage for your life and dependents. 50% of Hospital bill upto 4Lac Rupees or 10Lac rupees of sum assured in case of death.",
+      "id": 4,
+      "name": "Life Cover ",
+      "price": 850,
+      "type": "Basic"
+    },
+    {
+      "benefits": [
+        "Coverage after retirement",
+        "Coverage for death",
+        "Coverage after Meturity"
+      ],
+      "category": "Term Life",
+      "cover": 5,
+      "coverName": "Term Life Insurance",
+      "coverage": "Coverage for your future and your dependents after you. 20Lac of sum assured after your Retirement or In case of death.",
+      "id": 5,
+      "name": "Term Life Cover",
+      "price": 850,
+      "type": "Basic"
+    },
+    {
+      "benefits": [
+        "Coverage for accidents",
+        "Coverage for theft",
+        "Roadside assistance"
+      ],
+      "category": "Vehicle",
+      "cover": 10,
+      "coverName": "Auto Insurance",
+      "coverage": "Full coverage for your car upto 75%",
+      "id": 6,
+      "name": "Reassure 2.0 Platinum",
+      "price": 750,
+      "type": "Comprehensive"
+    },
+    {
+      "benefits": [
+        "Coverage for fire damage",
+        "Coverage for theft",
+        "Liability coverage"
+      ],
+      "category": "Property",
+      "cover": 5,
+      "coverName": "Home Insurance",
+      "coverage": "Coverage for your home and belongings upto 65%",
+      "id": 7,
+      "name": "Care Supreme 2.0",
+      "price": 1000,
+      "type": "Comprehensive"
+    },
+    {
+      "benefits": [
+        "Coverage for accidents",
+        "Coverage for theft",
+        "Roadside assistance"
+      ],
+      "category": "Vehicle",
+      "cover": 10,
+      "coverName": "Bike Insurance",
+      "coverage": "Full coverage for your Bike upto 65%",
+      "id": 8,
+      "name": "Vintage 2.0 Platinum",
+      "price": 650,
+      "type": "Comprehensive"
+    },
+    {
+      "benefits": [
+        "Coverage for accidents",
+        "Coverage for natural death",
+        "Coverage of hospital bills"
+      ],
+      "category": "Life",
+      "cover": 7,
+      "coverName": "Life Insurance",
+      "coverage": "Coverage for your life and dependents. 70% of Hospital bill upto 5Lac Rupees or 20Lac rupees of sum assured in case of death.",
+      "id": 9,
+      "name": "Life Cover 2.0",
+      "price": 1050,
+      "type": "Comprehensive"
+    },
+    {
+      "benefits": [
+        "Coverage after retirement",
+        "Coverage for death",
+        "Coverage after Meturity"
+      ],
+      "category": "Term Life",
+      "cover": 8,
+      "coverName": "Term Life Insurance",
+      "coverage": "Coverage for your future and your dependents after you. 50Lac of sum assured after your Retirement or In case of death.",
+      "id": 10,
+      "name": "Term Life Cover 2.0",
+      "price": 1250,
+      "type": "Comprehensive"
+    },
+    {
+      "benefits": [
+        "Coverage for accidents",
+        "Coverage for theft",
+        "Roadside assistance"
+      ],
+      "category": "Vehicle",
+      "cover": 10,
+      "coverName": "Auto Insurance",
+      "coverage": "Full coverage for your car 90%",
+      "id": 11,
+      "name": "Reassure 2.0 Platinum +",
+      "price": 900,
+      "type": "Premium"
+    },
+    {
+      "benefits": [
+        "Coverage for fire damage",
+        "Coverage for theft",
+        "Liability coverage"
+      ],
+      "category": "Property",
+      "cover": 5,
+      "coverName": "Home Insurance",
+      "coverage": "Coverage for your home and belongings upto 80%",
+      "id": 12,
+      "name": "Care Supreme 2.0 +",
+      "price": 1250,
+      "type": "Premium"
+    },
+    {
+      "benefits": [
+        "Coverage for accidents",
+        "Coverage for theft",
+        "Roadside assistance"
+      ],
+      "category": "Vehicle",
+      "cover": 10,
+      "coverName": "Bike Insurance",
+      "coverage": "Full coverage for your Bike upto 80%",
+      "id": 13,
+      "name": "Vintage 2.0 Platinum +",
+      "price": 850,
+      "type": "Premium"
+    },
+    {
+      "benefits": [
+        "Coverage for accidents",
+        "Coverage for theft",
+        "Roadside assistance"
+      ],
+      "category": "Vehicle",
+      "cover": 10,
+      "coverName": "Bike Insurance",
+      "coverage": "Full coverage for your Bike upto 90%",
+      "id": 14,
+      "name": "Vintage 2.0 Platinum ++",
+      "price": 1000,
+      "type": "Premium"
+    },
+    {
+      "benefits": [
+        "Coverage for accidents",
+        "Coverage for natural death",
+        "Coverage of hospital bills"
+      ],
+      "category": "Life",
+      "cover": 10,
+      "coverName": "Life Insurance",
+      "coverage": "Coverage for your life and dependents. 85% of Hospital bill upto 8Lac Rupees or 25Lac rupees of sum assured in case of death.",
+      "id": 15,
+      "name": "Life Cover 2.0 +",
+      "price": 1250,
+      "type": "Premium"
+    },
+    {
+      "benefits": [
+        "Coverage for fire damage",
+        "Coverage for theft",
+        "Liability coverage"
+      ],
+      "category": "Property",
+      "cover": 5,
+      "coverName": "Home Insurance",
+      "coverage": "Coverage for your home and belongings upto 95%",
+      "id": 16,
+      "name": "Home Care Platinum",
+      "price": 1500,
+      "type": "Advance Premium"
+    },
+    {
+      "benefits": [
+        "Coverage for accidents",
+        "Coverage for natural death",
+        "Coverage of hospital bills"
+      ],
+      "category": "Life",
+      "cover": 10,
+      "coverName": "Life Insurance",
+      "coverage": "Coverage for your life and dependents. 85% of Hospital bill upto 10Lac Rupees or 30Lac rupees of sum assured in case of death.",
+      "id": 17,
+      "name": "Life Cover 2.0 ++",
+      "price": 1500,
+      "type": "Advance Premium"
+    },
+    {
+      "benefits": [
+        "Coverage after retirement",
+        "Coverage for death",
+        "Coverage after Meturity"
+      ],
+      "category": "Term Life",
+      "cover": 10,
+      "coverName": "Term Life Insurance",
+      "coverage": "Coverage for your future and your dependents after you. 1Cr of sum assured after your Retirement or In case of death.",
+      "id": 18,
+      "name": "Term Life Cover 2.0 +",
+      "price": 1500,
+      "type": "Advance Premium"
+    }
+  ],
+  "purchased": [
+    {
+      "benefits": [
+        "Coverage for accidents",
+        "Coverage for theft",
+        "Roadside assistance"
+      ],
+      "category": "Vehicle",
+      "cover": 10,
+      "coverName": "Bike Insurance",
+      "coverage": "Full coverage for your Bike upto 80%",
+      "id": 1,
+      "name": "Vintage 2.0 Platinum +",
+      "price": 850,
+      "type": "Premium",
+      "policyID": 13,
+      "detailFullname": "Deepak ",
+      "detailEmail": "deepak@gmail.com",
+      "detailContact": 7854123698,
+      "detailComment": "Hello",
+      "cardHolderName": "Deepak",
       "cardnumber": "1111222233334444",
       "expmonth": "April",
+      "expyear": "2028",
+      "claimed": false,
+      "userID": "Deepak2"
+    },
+    {
+      "benefits": [
+        "Coverage after retirement",
+        "Coverage for death",
+        "Coverage after Meturity"
+      ],
+      "category": "Term Life",
+      "cover": 8,
+      "coverName": "Term Life Insurance",
+      "coverage": "Coverage for your future and your dependents after you. 50Lac of sum assured after your Retirement or In case of death.",
+      "id": 2,
+      "name": "Term Life Cover 2.0",
+      "price": 1250,
+      "type": "Comprehensive",
+      "policyID": 10,
+      "detailFullname": "Abhishek",
+      "detailEmail": "abhishek@gmail.com",
+      "detailContact": 7412589630,
+      "detailComment": "Hello Hi",
+      "cardHolderName": "Abhishek",
+      "cardnumber": "9999888877776666",
+      "expmonth": "December",
       "expyear": "2028",
       "claimed": true,
-      "userID": "Shail08"
-    },
-    {
-      "id": 2,
-      "name": "Life Cover",
-      "coverName": "Life Insurance",
-      "category": "Life",
-      "type": "Basic",
-      "coverage": "Coverage for your life and dependents",
-      "price": 800,
-      "benefits": [
-        "Coverage for accidents",
-        "Coverage for natural death",
-        "Coverage of hospital bills"
-      ],
-      "cover": 5,
-      "policyID": 13,
-      "detailFullname": "Abhinav Jain",
-      "detailEmail": "abhi@gmail.com",
-      "detailContact": 7415253645,
-      "detailComment": "I am purchasing this insurance because I think this insurance will cover my self very well and it will provide better cover for me and my family.",
-      "cardHolderName": "Abhinav Jain",
-      "cardnumber": "7458963211478523",
-      "expmonth": "August",
-      "expyear": "2027",
-      "claimed": false,
-      "userID": "abhi12"
-    },
-    {
-      "id": 3,
-      "name": "Life Cover Plus",
-      "coverName": "Life Insurance",
-      "category": "Life",
-      "type": "Basic",
-      "coverage": "Coverage for your life and dependents",
-      "price": 500,
-      "benefits": [
-        "Coverage for accidents",
-        "Coverage for natural death",
-        "Coverage of hospital bills"
-      ],
-      "cover": 5,
-      "policyID": 14,
-      "detailFullname": "Shailendra Jain",
-      "detailEmail": "shailendra@gmail.com",
-      "detailContact": 7869505416,
-      "detailComment": "I am purchasing this insurance because I think this insurance will cover my self very well and it will provide better cover for me and my family.",
-      "cardHolderName": "Shailendra Jain",
-      "cardnumber": "1111222233334444",
-      "expmonth": "April",
-      "expyear": "2028",
-      "claimed": false,
-      "userID": "Shail08"
+      "userID": "abhishek3"
     }
   ]
 }

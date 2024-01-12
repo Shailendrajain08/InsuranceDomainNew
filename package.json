@@ -24,8 +24,10 @@
     "@fortawesome/fontawesome-svg-core": "^6.5.1",
     "@fortawesome/free-solid-svg-icons": "^6.2.1",
     "angular-font-awesome": "^3.1.2",
+    "ng-swagger-gen": "^2.3.1",
     "ngx-toastr": "^16.0.2",
     "rxjs": "~7.5.0",
+    "swagger-ui": "^5.11.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.12.0"
   },

@@ -1,1 +1,28 @@
-<p>profile works!</p>
+<div class="main-heading">
+  <p>
+    <mat-toolbar>
+      <span>User Profile</span>
+    </mat-toolbar>
+  </p>
+</div>
+ <div class="main-body">
+  <div class="card" *ngFor="let item of currentUser">
+    <mat-card >
+     <div class="matCard">
+     <div class="div1">
+      <h1>User Details</h1>
+      <mat-divider></mat-divider>
+      <mat-card-header>
+        <mat-card-subtitle>{{item.coverName}}</mat-card-subtitle>
+        <mat-card-title ><b style="color: #1976d2;">Name: </b> {{item.name}}</mat-card-title>
+        <mat-card-title ><b style="color: #1976d2;">User Id: </b> {{item.id}}</mat-card-title>
+        <mat-card-title ><b style="color: #1976d2;">Email: </b> {{item.email}}</mat-card-title>
+        <mat-card-title ><b style="color: #1976d2;">Gender: </b> {{item.gender}}</mat-card-title>
+        <mat-card-title ><b style="color: #1976d2;">Password: </b> {{item.password}}</mat-card-title>
+        <mat-card-title ><b style="color: #1976d2;">Role: </b> {{item.role}}</mat-card-title>
+      </mat-card-header>
+     </div>
+    </div>
+    </mat-card>
+  </div>
+</div>

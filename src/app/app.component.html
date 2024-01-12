@@ -310,8 +310,8 @@
     src="../assets/images.png"/>
   <a routerLink="">Home</a>
   <a routerLink="policies">Policies</a>
-  <a *ngIf="isadmin" routerLink="/user">User</a>
-  <a routerLink="/customer" *ngIf="isadmin">Customer</a>
+  <a *ngIf="isadmin || isAgent" routerLink="/user">User</a>
+  <a routerLink="/soldPolicies" *ngIf="isadmin || isAgent">Sold Policies</a>
   <a routerLink="/MyPurchase" *ngIf="isCustomer">Purchase</a>
     <div class="spacer"></div>
   <a routerLink="/profile">Profile</a>

@@ -1,50 +1,50 @@
-<mat-card>
-    <mat-card-header>
-        <h2>Customer Listing</h2>
-       
-       
-    </mat-card-header>
-    <mat-card-content>
-        <div class="mat-elevation-z8">
-            <button (click)="addcustomer()" mat-raised-button color="primary">Add Customer</button>
-            <table mat-table matSort  [dataSource]="dataSource">
-          
-              <!-- Position Column -->
-              <ng-container matColumnDef="code">
-                <th mat-header-cell *matHeaderCellDef> Code </th>
-                <td mat-cell *matCellDef="let element"> {{element.id}} </td>
-              </ng-container>
-          
-              <!-- Name Column -->
-              <ng-container  matColumnDef="name">
-                <th mat-header-cell mat-sort-header *matHeaderCellDef> Name </th>
-                <td mat-cell *matCellDef="let element"> {{element.name}} </td>
-              </ng-container>
-          
-              <!-- Weight Column -->
-              <ng-container matColumnDef="creditlimit">
-                <th mat-header-cell *matHeaderCellDef> Creditlimit </th>
-                <td mat-cell *matCellDef="let element"> {{element.Creditlimit}} </td>
-              </ng-container>
-          
-              <ng-container matColumnDef="action">
-                <th mat-header-cell *matHeaderCellDef> Action </th>
-                <td mat-cell *matCellDef="let element">  
-                    <button (click)="updatecustomer(element.id)" mat-raised-button color="primary">Edit</button>
-                    <button (click)="removecustomer(element.id)" mat-raised-button color="accent">Delete</button>
-                </td>
-              </ng-container>
-          
-              <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-              <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-            </table>
-          
-            <mat-paginator [pageSizeOptions]="[5, 10, 20]"
-                           showFirstLastButtons
-                           aria-label="Select page of periodic elements">
-            </mat-paginator>
-          </div>
-    </mat-card-content>
-  </mat-card>
-
-
+<div class="main-heading">
+  <p>
+    <mat-toolbar>
+      <span>Purchased Policies</span>
+    </mat-toolbar>
+  </p>
+</div>
+<div class="main-body">
+  <div class="card" *ngFor="let item of purchasedDetails">
+    <mat-card >
+      <div class="matCard">
+     <div class="div1">
+      <h1>Policy Details</h1>
+      <hr>
+      <mat-card-header>
+        <mat-card-subtitle>{{item.coverName}}</mat-card-subtitle>
+        <mat-card-title style="color: #1976d2;">{{item.name}}</mat-card-title>
+      </mat-card-header>
+      <hr>
+      <mat-card-content>
+        <p><b style="color:#1976d2">Category:</b> {{item.category}}</p>
+        <p>{{item.coverage}}</p>
+        <p>{{item.benefits }}</p>
+        <p class="price"><b style="color:#1976d2">Amount:</b> {{item.price | currency :"INR" }}/-</p>
+      </mat-card-content>
+      <hr>
+     </div>
+     <div class="div2">
+      <h1 style="padding-left: 1%;">Policy Holder Details</h1>
+      <hr>
+      <mat-card-header>
+        <mat-card-subtitle><b style="color:#1976d2">E-mail:</b> {{item.detailEmail}}</mat-card-subtitle>
+        <mat-card-title style="color: #1976d2;">Name: {{item.detailFullname}}</mat-card-title>
+        <mat-card-subtitle><b style="color:#1976d2">Purchased By: </b> {{item.userID}}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-divider></mat-divider>
+      <br>
+      <mat-card-content>
+        <p><b style="color:#1976d2">Contact:</b> {{item.detailContact}}</p>
+        <p><b style="color:#1976d2">Comment:</b> {{item.detailComment}}</p>
+        <p ><b style="color:#1976d2">Claim Status: </b> <b [ngClass]="{
+          'positive' : item.claimed == true,
+          'negative' : item.claimed == false
+       }">{{item.claimed ? 'Claimed': 'Not claimed'}}</b></p>
+      </mat-card-content>
+     </div>
+    </div>
+    </mat-card>
+  </div>
+</div>

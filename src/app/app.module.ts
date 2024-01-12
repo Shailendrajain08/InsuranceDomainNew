@@ -9,7 +9,7 @@ import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { UserComponent } from './user/user.component';
-import {ReactiveFormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MaterialModule} from 'src/material.module';
 import {HttpClientModule} from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
@@ -19,6 +19,7 @@ import { PoliciesComponent } from './policies/policies.component';
 import { CartComponent } from './cart/cart.component';
 import { PurchasHistoryComponent } from './purchas-history/purchas-history.component';
 import { ProfileComponent } from './profile/profile.component';
+import { SearchComponent } from './search/search.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { ProfileComponent } from './profile/profile.component';
     PoliciesComponent,
     CartComponent,
     PurchasHistoryComponent,
-    ProfileComponent
+    ProfileComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
@@ -43,6 +45,7 @@ import { ProfileComponent } from './profile/profile.component';
     MaterialModule,
     HttpClientModule,
     ToastrModule.forRoot(),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

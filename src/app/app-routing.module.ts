@@ -10,17 +10,52 @@ import { CustomerComponent } from './customer/customer.component';
 import { CartComponent } from './cart/cart.component';
 import { PurchasHistoryComponent } from './purchas-history/purchas-history.component';
 import { ProfileComponent } from './profile/profile.component';
+import { SearchComponent } from './search/search.component';
 
 const routes: Routes = [
- {component:LoginComponent,path:'login'},
- {component:RegisterComponent,path:'register'},
- {component:PoliciesComponent, path:'policies'},
- {component:HomeComponent,path:'',canActivate:[AuthGuard]},
- {component:UserComponent,path:'user',canActivate:[AuthGuard]},
- {component:CustomerComponent,path:'customer',canActivate:[AuthGuard]},
- {component:CartComponent, path:'cart/:id'},
- {component:PurchasHistoryComponent, path:'MyPurchase'},
- {component:ProfileComponent, path:'profile'}
+  {
+    path: 'login',
+    component: LoginComponent
+  },
+  {
+    path: 'register',
+    component: RegisterComponent
+  },
+  {
+    path: 'policies',
+    component: PoliciesComponent
+  },
+  {
+    path: '',
+    component: HomeComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'user',
+    component: UserComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'soldPolicies',
+    component: CustomerComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'cart/:id',
+    component: CartComponent
+  },
+  {
+    path: 'MyPurchase',
+    component: PurchasHistoryComponent
+  },
+  {
+    path: 'profile',
+    component: ProfileComponent
+  },
+  {
+    path: 'search/:query',
+    component:SearchComponent
+  }
 ];
 
 @NgModule({

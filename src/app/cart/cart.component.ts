@@ -87,7 +87,6 @@ export class CartComponent implements OnInit {
       this.policyByID.userID = this.userDetails;
       this.policyByID.id = '';
 
-      console.log(this.policyByID)
       this._router.navigate(['MyPurchase'])
       this._auth.purchasedData(this.policyByID).subscribe(res=>{
         if(res){

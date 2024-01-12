@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms'
 import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
@@ -12,25 +12,33 @@ import { UpdatepopupComponent } from '../updatepopup/updatepopup.component'
   templateUrl: './user.component.html',
   styleUrls: ['./user.component.css']
 })
-export class UserComponent implements AfterViewInit {
+export class UserComponent implements OnInit {
 
   constructor(private builder: FormBuilder, private service: AuthService, private dialog: MatDialog) {
+
+  }
+  ngOnInit(): void {
+    this.getUser();
     this.LoadUser();
   }
   userlist: any;
   dataSource: any;
+  currentUser:any;
+  currentUserRole:any
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
 
-  ngAfterViewInit(): void {
-
-  }
   LoadUser() {
     this.service.Getall().subscribe(res => {
       this.userlist = res;
       this.dataSource = new MatTableDataSource(this.userlist);
       this.dataSource.paginator = this.paginator;
       this.dataSource.sort = this.sort;
+      for(let item of this.userlist){
+        if(this.currentUser == item.id){
+          this.currentUserRole=item.role
+        }
+      }
     });
   }
   displayedColumns: string[] = ['username', 'name', 'email', 'status', 'role', 'action'];
@@ -53,6 +61,8 @@ export class UserComponent implements AfterViewInit {
     });
   }
 
-
+  getUser() {
+    this.currentUser = sessionStorage.getItem('username') != null ? sessionStorage.getItem('username')?.toString() : '';
+    }
 
 }

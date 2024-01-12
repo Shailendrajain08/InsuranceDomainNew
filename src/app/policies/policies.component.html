@@ -1,23 +1,24 @@
-
-<div class="mat-card" >
+<app-search></app-search>
+<div class="mat-card">
   <div>
-  <mat-card class="card" *ngFor="let items of tags">
-    <mat-card-header>
-      <mat-card-subtitle>{{items.coverName}}</mat-card-subtitle>
-      <mat-card-title style="color: #1976d2;">{{items.name}}</mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
-      <p><b style="color:#1976d2">Category:</b> {{items.category}}</p>
-      <p>{{items.coverage}}</p>
-      <p>{{items.benefits }}</p>
-      <p class="price">{{items.price | currency :"INR" }}/-</p>
-      <mat-divider></mat-divider>
-    </mat-card-content>
-    <mat-card-actions>
-      <button class="example-full-width" mat-button style="color: #1976d2;" routerLink="/cart/{{items.id}}" *ngIf="role != 'agent' && 'admin'">BUY</button>
-    </mat-card-actions>
-  </mat-card>
+    <mat-card class="card" *ngFor="let items of tags">
+      <mat-card-header>
+        <mat-card-subtitle>{{items.coverName}}</mat-card-subtitle>
+        <mat-card-title style="color: #1976d2;">{{items.name}}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p><b style="color:#1976d2">Category:</b> {{items.category}}</p>
+        <p>{{items.coverage}}</p>
+        <p>{{items.benefits }}</p>
+        <p class="price">{{items.price | currency :"INR" }}/-</p>
+        <mat-divider></mat-divider>
+      </mat-card-content>
+      <mat-card-actions>
+        <button class="example-full-width" mat-button style="color: #1976d2;" routerLink="/cart/{{items.id}}"
+          *ngIf="role == 'customer'">BUY</button>
+        <p *ngIf="role != 'customer'" style="color: #1976d2">Policy Listed by your company in {{items.category}}
+          Category</p>
+      </mat-card-actions>
+    </mat-card>
+  </div>
 </div>
-</div>
-
-
